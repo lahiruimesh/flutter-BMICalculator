@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'screens/landing_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,8 +11,21 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      home: LandingPage(),
+      home: Scaffold( // Basic page layout
+        appBar: AppBar(
+          title: Text("My First Flutter App"),
+        ),
+        body: Center(
+          child: Text(
+            "Hello, World!", //first message
+            style: TextStyle(
+            fontSize: 30,
+            fontWeight: FontWeight.bold,
+            color: Colors.purple
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
